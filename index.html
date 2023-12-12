@@ -31,7 +31,7 @@
                         <li v-for="(text, i) in todos" :key="i" class="user-list"
                         :class="todos[i].done ? 'dashed': ''">
                             {{ todos[i].text }}
-                            <i class="fa-solid fa-circle-xmark"></i>
+                            <i class="fa-solid fa-circle-xmark" @click="deleteTask(i)"></i>
                         </li>
                     </ul>
                 </div>

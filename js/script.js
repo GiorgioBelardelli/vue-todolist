@@ -29,6 +29,9 @@ createApp({
             };
             this.todos.unshift(newTask);
             this.message.text = "";
+        },
+        deleteTask(indice){
+            this.todos.splice(indice, 1);
         }
     }
 }).mount("#app")
