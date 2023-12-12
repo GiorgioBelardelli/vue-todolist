@@ -30,7 +30,7 @@ input{
     padding: .5rem 1.5rem;
 }
 #user-input{
-    width: 15%;
+    width: 10%;
     border-radius: 10px;
 }
 #user-input:hover{
@@ -62,10 +62,19 @@ i {
     cursor: pointer;
     
 }
+i:hover{
+    color:  rgb(247, 18, 18) ;
+    transition-duration: .3s;
+}
 
 li{
     border-bottom: 1px solid #a5a5a5;
     padding: .5rem;
+    cursor: pointer;
+}
+li:hover{
+    font-weight: 600;
+    transition-duration: .2s;
 }
 
 .dashed{

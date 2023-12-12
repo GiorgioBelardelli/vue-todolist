@@ -32,6 +32,13 @@ createApp({
         },
         deleteTask(indice){
             this.todos.splice(indice, 1);
+        },
+        taskOnOff(indice){
+            if(this.todos[indice].done === false){
+                this.todos[indice].done = true;
+            } else {
+                this.todos[indice].done = false;
+            }
         }
     }
 }).mount("#app")
