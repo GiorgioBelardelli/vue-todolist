@@ -22,18 +22,19 @@
             <div id="app">
 
                 <div class="input-container">
-                    <input type="text" placeholder="Scrivi la nuova task" v-model="message" id="user-input">
+                    <input type="text" placeholder="Scrivi la nuova task" v-model="message" id="user-input" @keyup.enter="addTask">
                     <input type="button" @click="addTask" value="Aggiungi" id="add-button">
                 </div>
              
                 <div class="task-container">
-                    <ul>
+                    <ul v-if="todos.length > 0">
                         <li v-for="(text, i) in todos" :key="i" class="user-list"
                         :class="todos[i].done ? 'dashed': ''">
                             {{ todos[i].text }}
                             <i class="fa-solid fa-circle-xmark" @click="deleteTask(i)"></i>
                         </li>
                     </ul>
+                    <h3 v-else>Non ci sono task bello mio</h3>
                 </div>
             </div>
             

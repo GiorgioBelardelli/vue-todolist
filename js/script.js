@@ -28,7 +28,7 @@ createApp({
                 done: false
             };
             this.todos.unshift(newTask);
-            this.message.text = "";
+            this.message = "";
         },
         deleteTask(indice){
             this.todos.splice(indice, 1);

@@ -54,6 +54,7 @@ input{
     width: 15%;
     padding: 3rem;
     margin: 5rem auto;
+    border-radius: 10px;
 }
 
 i {
