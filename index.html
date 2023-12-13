@@ -28,9 +28,9 @@
              
                 <div class="task-container">
                     <ul v-if="todos.length > 0">
-                        <li v-for="(text, i) in todos" :key="i" class="user-list"
-                        :class="todos[i].done ? 'dashed': ''" @click="taskOnOff(i)">
-                            {{ todos[i].text }}
+                        <li v-for="(todo, i) in todos" :key="i" class="user-list"
+                        :class="todo.done ? 'dashed': ''" @click="taskOnOff(i)">
+                            {{ todo.text }}
                             <i class="fa-solid fa-circle-xmark" @click="deleteTask(i)"></i>
                         </li>
                     </ul>
